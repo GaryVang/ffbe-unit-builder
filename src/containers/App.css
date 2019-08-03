@@ -1,33 +1,19 @@
-.App {
+@font-face {
+  font-family: 'FINALFANTASY LOGO FONT';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FINALFANTASY LOGO FONT'), url('finalf.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'FINALFANTASY LOGO FONT';
+  font-weight: 2000;
+  color: black;
   text-align: center;
+  border-bottom-style: solid;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  /*background-color: #E6FEDB;*/
+  background: radial-gradient(circle, rgba(243,251,238,0.9976191160057774) 0%, rgba(210,207,184,1) 100%);
 }
