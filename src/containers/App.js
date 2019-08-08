@@ -1,13 +1,17 @@
 import React from 'react';
-import logo from '../logo.svg';
+import SearchBox from '../components/SearchBox';
+import DropDownUnit from '../components/DropDownUnit';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <h1 className='header'>FFBE Unit Builder</h1>
-    </div>
-  );
+	//const { onSearchChange } = this.props;
+	return (
+	<div className="App">
+	  <h1 className='header'>FFBE Unit Builder</h1>
+	  <SearchBox />
+	  <DropDownUnit />
+	</div>
+	);
 }
 
 export default App;
