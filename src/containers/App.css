@@ -13,7 +13,55 @@ h1 {
   border-bottom-style: solid;
 }
 
-body {
-  /*background-color: #E6FEDB;*/
-  background: radial-gradient(circle, rgba(243,251,238,0.9976191160057774) 0%, rgba(210,207,184,1) 100%);
+#container {
+  height: 100%;
+}
+
+.toppanel {
+  border-color: yellow;
+  border-style: solid;
+  height: 5vh; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.searchbox {
+  padding-right: 10px;
+}
+
+.statpanel {
+  border-color: red;
+  border-style: solid;
+  height: 25vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.equipmentpanel {
+  border-color: green;
+  border-style: solid;
+  height: 29vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.materiapanel {
+  border-color: black;
+  border-style: solid;
+  height: 13vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.esperpanel {
+  border-color: blue;
+  border-style: solid;
+  height: 9vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }
