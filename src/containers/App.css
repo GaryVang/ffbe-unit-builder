@@ -29,24 +29,67 @@ h1 {
 .searchbox {
   padding-right: 10px;
 }
-
-.statpanel {
+/*----------------------Stats-----------------------------*/
+/*.statpanel {
   border-color: red;
   border-style: solid;
   height: 25vh; 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}*/
+.unitname { grid-area: name; }
+.stats { grid-area: stats; }
+.unitimg { grid-area: img; }
+.weapontype { grid-area: weapon; }
+.killers { grid-area: killer; }
+.ailment { grid-area: ailment; }
+.element { grid-area: elements; }
+
+.grid-container {
+/*  border-color: red;
+  border-style: solid;*/
+  height: 25vh; 
+  display: grid;
+  grid-template-areas:
+    'name stats stats stats stats'
+    'img stats stats stats stats'
+    'img weapon weapon weapon weapon'
+    'ailment ailment killer killer killer'
+    'elements elements killer killer killer';
 }
 
+.grid-container > div {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/*--------------------------Equipment--------------------------------*/
+.r-hand { grid-area: r; }
+.l-hand { grid-area: l; }
+.head { grid-area: head; }
+.body { grid-area: body; }
+.acc1 { grid-area: acc1; }
+.acc2 { grid-area: acc2; }
+
+
 .equipmentpanel {
+  height: 29vh; 
+  display: grid;
+  grid-template-areas:
+    'r l'
+    'head body'
+    'acc1 acc2';
+}
+
+.equipmentpanel > * {
   border-color: green;
   border-style: solid;
-  height: 29vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+  border-width: 1px;
 }
+
+/*-----------------------------Materia---------------------------------*/
 
 .materiapanel {
   border-color: black;
