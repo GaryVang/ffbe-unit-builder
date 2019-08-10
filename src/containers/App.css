@@ -65,7 +65,7 @@ h1 {
   border-width: 1px;
 }
 
-/*--------------------------Equipment--------------------------------*/
+/*--------------------------Equipment--------------*/
 .r-hand { grid-area: r; }
 .l-hand { grid-area: l; }
 .head { grid-area: head; }
@@ -81,6 +81,7 @@ h1 {
     'r l'
     'head body'
     'acc1 acc2';
+
 }
 
 .equipmentpanel > * {
@@ -88,23 +89,77 @@ h1 {
   border-style: solid;
   border-width: 1px;
 }
+/*----------subpanel----------*/
+.eqname { grid-area: eqname; }
+.eqicon { grid-area: eqicon; }
+.eqstat { grid-area: eqstat; }
+.eqimg { grid-area: eqimg; }
+.eqelement { grid-area: eqel; }
+.eqhandle { grid-area: eqh; }
+.eqenhancement { grid-area: eqenhance; }
 
-/*-----------------------------Materia---------------------------------*/
+.eqsubpanel {
+  display: grid;
+  grid-template-areas:
+    'eqname eqname eqicon eqstat eqstat'
+    'eqimg eqimg eqel eqstat eqstat'
+    'eqimg eqimg eqh eqenhance eqenhance';
 
-.materiapanel {
+  
+  min-width: 0;
+  min-height: 0;
+}
+
+.eqsubpanel > * {
   border-color: black;
   border-style: solid;
-  height: 13vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+  border-width: 1px;  
 }
 
+/*.eqimg > img {
+  overflow: hidden;
+  min-width: 0;
+}*/
+
+
+/*-----------------------------Materia-----------------*/
+.mat1 { grid-area: 1; }
+.mat2 { grid-area: 2; }
+.mat3 { grid-area: 3; }
+.mat4 { grid-area: 4; }
+
+.materiapanel {
+  height: 13vh; 
+  display: grid;
+  grid-template-areas:
+    '1 2'
+    '3 4';
+}
+
+.materiapanel > * {
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+}
+/*----------------------Esper-------------------------*/
+.espername { grid-area: ename; }
+.esperstat { grid-area: estat; }
+.esperimg { grid-area: eimg; }
+.esperability { grid-area: eabi; }
+
 .esperpanel {
+/*  border-color: blue;
+  border-style: solid;*/
+  height: 9vh; 
+  display: grid;
+  grid-template-areas:
+    'ename estat estat estat'
+    'eimg estat estat estat'
+    'eimg eabi eabi eabi';
+}
+.esperpanel > * {
   border-color: blue;
   border-style: solid;
-  height: 9vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+  border-width: 1px;
 }
+/*----------------------------------------------------*/

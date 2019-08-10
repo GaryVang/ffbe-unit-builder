@@ -8,7 +8,7 @@ const SearchBox = ({ searchfield, searchChange }) => {
 				type='search' 
 				placeholder='search units'
 				onChange={searchChange}
-		/>
+			/>
 		</div>
 	);
 }
