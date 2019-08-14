@@ -30,14 +30,6 @@ h1 {
   padding-right: 10px;
 }
 /*----------------------Stats-----------------------------*/
-/*.statpanel {
-  border-color: red;
-  border-style: solid;
-  height: 25vh; 
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}*/
 .unitname { grid-area: name; }
 .stats { grid-area: stats; }
 .unitimg { grid-area: img; }
@@ -47,10 +39,12 @@ h1 {
 .element { grid-area: elements; }
 
 .grid-container {
-/*  border-color: red;
-  border-style: solid;*/
-  height: 25vh; 
+  height: 25vh;
   display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
   grid-template-areas:
     'name stats stats stats stats'
     'img stats stats stats stats'
@@ -65,6 +59,12 @@ h1 {
   border-width: 1px;
 }
 
+.unitimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /*--------------------------Equipment--------------*/
 .r-hand { grid-area: r; }
 .l-hand { grid-area: l; }
@@ -77,6 +77,10 @@ h1 {
 .equipmentpanel {
   height: 29vh; 
   display: grid;
+
+/*  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);*/
+
   grid-template-areas:
     'r l'
     'head body'
@@ -100,26 +104,38 @@ h1 {
 
 .eqsubpanel {
   display: grid;
+  height: 9.5vh;
+/*  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);*/
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
   grid-template-areas:
     'eqname eqname eqicon eqstat eqstat'
     'eqimg eqimg eqel eqstat eqstat'
     'eqimg eqimg eqh eqenhance eqenhance';
-
-  
-  min-width: 0;
-  min-height: 0;
 }
 
 .eqsubpanel > * {
   border-color: black;
   border-style: solid;
-  border-width: 1px;  
+  border-width: 1px; 
+  font-size: 11px; 
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
 }
 
-/*.eqimg > img {
-  overflow: hidden;
-  min-width: 0;
-}*/
+.eqname {
+  font-size: 9px;
+}
+
+.eqimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
 
 /*-----------------------------Materia-----------------*/
@@ -141,6 +157,40 @@ h1 {
   border-style: solid;
   border-width: 1px;
 }
+
+
+/*-----------Mat Subpanel------------------*/
+.matname { grid-area: matname; }
+.matimg { grid-area: matimg; }
+.matstat { grid-area: matstat; }
+
+.matsubpanel {
+  display: grid;
+  height: 6.3vh;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  grid-template-areas:
+    'matname matname matstat matstat matstat matstat'
+    'matimg matimg matstat matstat matstat matstat'
+    'matimg matimg matstat matstat matstat matstat';
+}
+
+.matsubpanel > * {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px; 
+  font-size: 11px; 
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.matimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 /*----------------------Esper-------------------------*/
 .espername { grid-area: ename; }
 .esperstat { grid-area: estat; }
@@ -148,10 +198,12 @@ h1 {
 .esperability { grid-area: eabi; }
 
 .esperpanel {
-/*  border-color: blue;
-  border-style: solid;*/
   height: 9vh; 
   display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
   grid-template-areas:
     'ename estat estat estat'
     'eimg estat estat estat'
@@ -161,5 +213,15 @@ h1 {
   border-color: blue;
   border-style: solid;
   border-width: 1px;
+}
+
+.espername {  /*for font*/ 
+
+}
+
+.esperimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 /*----------------------------------------------------*/
