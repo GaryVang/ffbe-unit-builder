@@ -29,39 +29,199 @@ h1 {
 .searchbox {
   padding-right: 10px;
 }
+/*----------------------Stats-----------------------------*/
+.unitname { grid-area: name; }
+.stats { grid-area: stats; }
+.unitimg { grid-area: img; }
+.weapontype { grid-area: weapon; }
+.killers { grid-area: killer; }
+.ailment { grid-area: ailment; }
+.element { grid-area: elements; }
 
-.statpanel {
-  border-color: red;
-  border-style: solid;
-  height: 25vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.grid-container {
+  height: 25vh;
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  grid-template-areas:
+    'name stats stats stats stats'
+    'img stats stats stats stats'
+    'img weapon weapon weapon weapon'
+    'ailment ailment killer killer killer'
+    'elements elements killer killer killer';
 }
 
-.equipmentpanel {
-  border-color: green;
-  border-style: solid;
-  height: 29vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;  
-}
-
-.materiapanel {
+.grid-container > div {
   border-color: black;
   border-style: solid;
-  height: 13vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+  border-width: 1px;
 }
 
+.unitimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*--------------------------Equipment--------------*/
+.r-hand { grid-area: r; }
+.l-hand { grid-area: l; }
+.head { grid-area: head; }
+.body { grid-area: body; }
+.acc1 { grid-area: acc1; }
+.acc2 { grid-area: acc2; }
+
+
+.equipmentpanel {
+  height: 29vh; 
+  display: grid;
+
+/*  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);*/
+
+  grid-template-areas:
+    'r l'
+    'head body'
+    'acc1 acc2';
+
+}
+
+.equipmentpanel > * {
+  border-color: green;
+  border-style: solid;
+  border-width: 1px;
+}
+/*----------subpanel----------*/
+.eqname { grid-area: eqname; }
+.eqicon { grid-area: eqicon; }
+.eqstat { grid-area: eqstat; }
+.eqimg { grid-area: eqimg; }
+.eqelement { grid-area: eqel; }
+.eqhandle { grid-area: eqh; }
+.eqenhancement { grid-area: eqenhance; }
+
+.eqsubpanel {
+  display: grid;
+  height: 9.5vh;
+/*  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);*/
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  grid-template-areas:
+    'eqname eqname eqicon eqstat eqstat'
+    'eqimg eqimg eqel eqstat eqstat'
+    'eqimg eqimg eqh eqenhance eqenhance';
+}
+
+.eqsubpanel > * {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px; 
+  font-size: 11px; 
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.eqname {
+  font-size: 9px;
+}
+
+.eqimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/*-----------------------------Materia-----------------*/
+.mat1 { grid-area: 1; }
+.mat2 { grid-area: 2; }
+.mat3 { grid-area: 3; }
+.mat4 { grid-area: 4; }
+
+.materiapanel {
+  height: 13vh; 
+  display: grid;
+  grid-template-areas:
+    '1 2'
+    '3 4';
+}
+
+.materiapanel > * {
+  border-color: red;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+/*-----------Mat Subpanel------------------*/
+.matname { grid-area: matname; }
+.matimg { grid-area: matimg; }
+.matstat { grid-area: matstat; }
+
+.matsubpanel {
+  display: grid;
+  height: 6.3vh;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  grid-template-areas:
+    'matname matname matstat matstat matstat matstat'
+    'matimg matimg matstat matstat matstat matstat'
+    'matimg matimg matstat matstat matstat matstat';
+}
+
+.matsubpanel > * {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px; 
+  font-size: 11px; 
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.matimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/*----------------------Esper-------------------------*/
+.espername { grid-area: ename; }
+.esperstat { grid-area: estat; }
+.esperimg { grid-area: eimg; }
+.esperability { grid-area: eabi; }
+
 .esperpanel {
+  height: 9vh; 
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+
+  grid-template-areas:
+    'ename estat estat estat'
+    'eimg estat estat estat'
+    'eimg eabi eabi eabi';
+}
+.esperpanel > * {
   border-color: blue;
   border-style: solid;
-  height: 9vh; 
-  display: flex;
-  align-items: center;
-  justify-content: center;  
+  border-width: 1px;
 }
+
+.espername {  /*for font*/ 
+
+}
+
+.esperimg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/*----------------------------------------------------*/
