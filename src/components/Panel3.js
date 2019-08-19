@@ -3,7 +3,7 @@
 //		Name, img, element, 1H/2H, 
 //		stats(including abilities), enhancements
 import React from 'react';
-import EqSubPanel from './EqSubPanel';
+import EqSubPanel from './eqsubpanel';
 
 const Panel3 = () => {
 	return (
