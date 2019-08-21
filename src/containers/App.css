@@ -64,19 +64,27 @@ h1 {
   border-style: solid;
   display: grid;
 
-  padding: 0;
-  margin: 0;
+  grid-gap: 1px;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(0, auto));
+
+  justify-content: stretch;
 
   /*grid-template-areas:
     'eqsearch bsort bfilter';*/
 }
 
-.eqselectpanel > EqSelectPanel {
-  margin: 100px;
+.eqselectpanel > * {
+  border-color: blue;
+  border-style: solid;
+  padding: 0;
+  grid-gap: 0;
 }
+
+/*.eqselectpanel > EqSelectPanel {
+  margin: 100px;
+}*/
 /*---------------------------------------------------------*/
 .toppanel {
   border-color: yellow;
