@@ -67,19 +67,22 @@ h1 {
   grid-gap: 1px;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, auto));
+  /*grid-template-rows: repeat(5, minmax(0, auto));*/
+  grid-template-rows: 33px repeat(3, minmax(0, 71px));
 
-  justify-content: stretch;
+  /*justify-content: stretch;*/
 
   /*grid-template-areas:
     'eqsearch bsort bfilter';*/
 }
 
 .eqselectpanel > * {
-  border-color: blue;
+  border-color: grey;
   border-style: solid;
   padding: 0;
   grid-gap: 0;
+
+
 }
 
 /*.eqselectpanel > EqSelectPanel {
