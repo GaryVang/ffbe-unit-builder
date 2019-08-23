@@ -68,7 +68,9 @@ h1 {
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
   /*grid-template-rows: repeat(5, minmax(0, auto));*/
-  grid-template-rows: 33px repeat(3, minmax(0, 71px));
+
+  /*increase row width if equipment panel altered or border added*/
+  grid-template-rows: 33px repeat(3, minmax(0, 66px)); 
 
   /*justify-content: stretch;*/
 
@@ -77,8 +79,8 @@ h1 {
 }
 
 .eqselectpanel > * {
-  border-color: grey;
-  border-style: solid;
+/*  border-color: grey;
+  border-style: solid;*/
   padding: 0;
   grid-gap: 0;
 
