@@ -11,12 +11,86 @@ h1 {
   color: black;
   text-align: center;
   border-bottom-style: solid;
+  font-size: 15px;
 }
 
 #container {
   height: 100%;
 }
+/*-------------------Hover&Visibility Test------------------*/
+/*#container .eqselectpanel{
+  visibility: hidden;
+}
 
+#container:hover .eqselectpanel {
+  visibility: visible;
+}*/
+
+.buttonsort {
+  background-color: #008CBA;
+  border: solid;
+  border-color: grey;
+  border-radius: 12px;
+  width: 75px;
+  height: 30px;
+
+  justify-self: end;
+}
+
+.buttonfilter {
+  background-color: #008CBA;
+  border: solid;
+  border-color: grey;
+  border-radius: 12px;
+  width: 75px;
+  height: 30px;
+
+  justify-self: center;
+}
+
+/*.eqsearchbox { grid-area: eqsearch; }
+.buttonsort { grid-area: bsort; }
+.buttonfilter { grid-area: bfilter; }*/
+
+.eqselectpanel {
+  position: absolute;
+  top: 37vh;
+  left: 0;
+  height: 60vh;
+  opacity: 1;
+  background-color: pink;
+  width: 98%;
+  border-color: red;
+  border-style: solid;
+  display: grid;
+
+  grid-gap: 1px;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /*grid-template-rows: repeat(5, minmax(0, auto));*/
+
+  /*increase row width if equipment panel altered or border added*/
+  grid-template-rows: 33px repeat(3, minmax(0, 66px)); 
+
+  /*justify-content: stretch;*/
+
+  /*grid-template-areas:
+    'eqsearch bsort bfilter';*/
+}
+
+.eqselectpanel > * {
+/*  border-color: grey;
+  border-style: solid;*/
+  padding: 0;
+  grid-gap: 0;
+
+
+}
+
+/*.eqselectpanel > EqSelectPanel {
+  margin: 100px;
+}*/
+/*---------------------------------------------------------*/
 .toppanel {
   border-color: yellow;
   border-style: solid;

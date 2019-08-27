@@ -4,6 +4,9 @@ import Panel2 from '../components/Panel2';
 import Panel3 from '../components/Panel3';
 import Panel4 from '../components/Panel4';
 import Panel5 from '../components/Panel5';
+
+import EqSelectPanel from '../components/EqSelectPanel';
+
 import './App.css';
 
 function App() {
@@ -18,6 +21,7 @@ function App() {
 		  <Panel3 />
 		  <Panel4 />
 		  <Panel5 />
+		  <EqSelectPanel />
 		</div>
 	);
 }
